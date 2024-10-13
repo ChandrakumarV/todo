@@ -1,0 +1,254 @@
+body {
+  background: linear-gradient(to top right, #ff758c, #ff7eb3); /* Vibrant pink gradient */
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Architects Daughter", cursive;
+  color: #fff; /* White text for better contrast */
+  text-align: center;
+  position: relative; /* For pseudo-element positioning */
+  overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://www.transparenttextures.com/patterns/diagonal-stripe.png'); /* Subtle diagonal stripes */
+  opacity: 0.05; /* Light opacity for a delicate effect */
+  z-index: 0; /* Place it behind other elements */
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  background: rgba(255, 255, 255, 0.1); /* Light white overlay for depth */
+  border-radius: 20px; /* Rounded corners for overlay */
+  z-index: 0; /* Place it behind the container */
+}
+
+h1 {
+  margin: 0; /* Remove default margin */
+}
+
+
+.container {
+  width: 100%;
+  max-width: 500px; /* Keep the width constrained for better aesthetics */
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)); /* Soft gradient background */
+  border-radius: 30px; /* More rounded corners for a softer appearance */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15); /* Strong shadow for depth */
+  padding: 2rem;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  backdrop-filter: blur(20px); /* Frosted glass effect */
+  position: relative; /* Positioning context for inner elements */
+  z-index: 1; /* Place it above background elements */
+}
+
+.container:hover {
+  transform: translateY(-10px); /* Lift on hover for elegance */
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3); /* Increase shadow on hover for added depth */
+}
+
+/* Adding some inner decoration */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 25px; /* Slightly rounded corners for the inner box */
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white for a subtle inner glow */
+  z-index: -1; /* Place behind the main content */
+}
+
+.heading h1 {
+  padding: 0.5rem 1rem;
+  border-radius: 15px; /* Rounded corners for the heading */
+  background-color: #fdcb6e; /* Warm yellow for the heading */
+  font-size: 2rem; /* Smaller size for a formal look */
+  color: #333; /* Dark text for contrast */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Add some styling to the list items for consistency */
+li {
+  text-align: left;
+  position: relative;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.6); /* Light background for list items */
+  border-radius: 10px; /* Rounded corners for list items */
+  margin: 0.5rem 0; /* Space between items */
+  transition: background 0.3s ease; /* Smooth background change */
+}
+
+li:hover {
+  background: rgba(255, 255, 255, 0.8); /* Change background on hover for emphasis */
+}
+
+.form {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align items */
+  margin-top: 1.5rem; /* Spacing from the heading */
+  width: 100%; /* Full width to accommodate styles */
+}
+
+.form input {
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.9); /* Light background for input */
+  padding: 0.8rem 1rem; /* More padding for a comfortable feel */
+  border-radius: 20px; /* Rounded corners */
+  border: 2px solid #fdcb6e; /* Yellow border for style */
+  font-family: "Architects Daughter", cursive;
+  font-size: 1.2rem; /* Slightly larger font size */
+  color: #333; /* Dark text for contrast */
+  width: 80%; /* Width for input */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+  margin-bottom: 1rem; /* Spacing below input */
+}
+
+.form input:focus {
+  outline: none; /* Remove default outline */
+  border-color: #6a0572; /* Change border color on focus */
+  box-shadow: 0 0 10px rgba(106, 5, 114, 0.5); /* Glow effect on focus */
+}
+
+button {
+  padding: 0.7rem 2rem; /* Ample padding for a comfortable click area */
+  border: none; /* No border for a seamless look */
+  border-radius: 50px; /* Fully rounded corners for a sleek appearance */
+  background: linear-gradient(145deg, #ff5f6d, #ffc371); /* Soft gradient for visual appeal */
+  color: #fff; /* White text for contrast */
+  font-family: "Architects Daughter", cursive; /* Maintain the font style */
+  font-size: 1.5rem; /* Larger font size for emphasis */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  position: relative; /* Position for child elements */
+}
+
+button:hover {
+  background: linear-gradient(145deg, #ffc371, #ff5f6d); /* Reverse gradient on hover for dynamic effect */
+  transform: translateY(-4px); /* Lift effect for elegance */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Increase shadow on hover for more depth */
+}
+
+button:active {
+  transform: translateY(2px); /* Push effect on click for realism */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+}
+
+button::after {
+  content: ""; /* Create a glowing effect */
+  position: absolute;
+  top: 0; /* Align with the button */
+  left: 0; /* Align with the button */
+  right: 0; /* Align with the button */
+  bottom: 0; /* Align with the button */
+  border-radius: 50px; /* Match button shape */
+  background: rgba(255, 255, 255, 0.2); /* Light glow effect */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.3s ease; /* Smooth transition for glow */
+  z-index: -1; /* Send behind the button */
+}
+
+button:hover::after {
+  opacity: 1; /* Show glow effect on hover */
+}
+
+
+ul {
+  padding: 0; /* Reset padding for the list */
+  list-style: none; /* Remove default list styles */
+}
+
+ul {
+  padding: 0; /* Remove default padding */
+  list-style-type: none; /* Remove default bullet points */
+}
+
+ul {
+  padding: 0; /* Remove default padding */
+  list-style-type: none; /* Remove default bullet points */
+  margin: 0; /* Remove default margin */
+}
+
+ul {
+  padding: 0; /* Remove default padding */
+  list-style-type: none; /* Remove default bullet points */
+  margin: 0; /* Remove default margin */
+}
+
+ul {
+  padding: 0; /* Remove default padding */
+  list-style-type: none; /* Remove default bullet points */
+}
+
+ul {
+  padding: 0; /* Remove default padding */
+  list-style-type: none; /* Remove default bullet points */
+  margin: 0; /* Remove default margin */
+}
+
+li {
+  background: linear-gradient(135deg, #ffafbd, #ffc3a0); /* Soft, attractive gradient background */
+  color: #2d2d2d; /* Dark text for good contrast */
+  padding: 1rem 1.5rem; /* Generous padding for comfort */
+  margin: 0.5rem 0; /* Space between items */
+  border-radius: 12px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  font-family: "Architects Daughter", cursive; /* Maintain consistent font style */
+  font-size: 1.2rem; /* Slightly larger font size for readability */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover effects */
+  display: flex; /* Use flex for better layout control */
+  align-items: center; /* Center items vertically */
+  position: relative; /* For positioning effects */
+}
+
+li:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Increase shadow on hover for more depth */
+}
+
+li:active {
+  transform: translateY(1px); /* Push effect on click */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Reset shadow on click */
+}
+
+li::before {
+  content: "✔"; /* Checkmark before each item */
+  color: #28a745; /* Green color for checkmark */
+  margin-right: 10px; /* Space between checkmark and text */
+  font-size: 1.5rem; /* Larger checkmark for visibility */
+}
+
+li span {
+  display: inline-block; /* Allow text to flow nicely */
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Full width for the text */
+  overflow: hidden; /* Prevent overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.todo-list {
+  margin-top: 1.5rem; /* Spacing above the list */
+  padding: 0; /* Remove default padding */
+  list-style: none; /* Remove default bullet points */
+  display: flex; /* Use flex for better alignment */
+  flex-direction: column; /* Stack items vertically */
+  align-items: stretch; /* Allow items to stretch full width */
+}
